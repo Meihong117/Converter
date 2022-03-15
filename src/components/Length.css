@@ -1,0 +1,36 @@
+.length-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.length {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+.length-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px; */
+}
+.select-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.convert-btn {
+  display: flex;
+  justify-self: end;
+}
+.selection > option {
+  margin: 20px 0;
+  width: 150px;
+}
+.select-container > input {
+  margin: 20px 0;
+  width: 150px;
+}
