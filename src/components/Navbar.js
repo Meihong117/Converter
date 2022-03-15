@@ -7,7 +7,7 @@ function Navbar() {
     const [click, setClick] = useState(false);
 
     return (
-        <>
+        
             <nav className='navbar'>
                 <div className='navbar-container'>
                     {/* logo + icon */}
@@ -49,7 +49,7 @@ function Navbar() {
                     </ul>
                 </div>
             </nav>
-        </>
+        
     );
 }
 
