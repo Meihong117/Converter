@@ -8,7 +8,7 @@
     },
     "routes": [
         {
-            "route": "/user/:id",
+            "route": "/",
             "rewrite": "/components"
         }
     ]
