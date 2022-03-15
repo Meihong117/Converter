@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import './Celsius.css';
+import { FaExchangeAlt } from "react-icons/fa";
 
 const Home = () => {
     const [temp, updateTemp] = useState({ f: 0, c: 0 })
@@ -16,22 +18,27 @@ const Home = () => {
 
     return (
         < >
-            <div id="container">
-                <div id="box1">
-                    <h1>Celsius</h1>
-                    <input
-                        type = "number"
-                        value = {temp.c}
-                        onChange = {updateC} >
-                    </input>
-                </div>
-                <div id="box2">
-                    <h1>Fahrenheit</h1>
-                    <input
-                        type = "number" 
-                        value = {temp.f} 
-                        onChange = {updateF}>
-                    </input>
+            <div className="cel-container">
+                <div className='cel-wrapper'>
+                    <div className="card">
+                        <p>Celsius</p>
+                        <input
+                            className='input-number'
+                            type = "number"
+                            value = {temp.c}
+                            onChange = {updateC} >
+                        </input>
+                    </div>
+                    <FaExchangeAlt />
+                    <div className="card">
+                        <p>Fahrenheit</p>
+                        <input
+                            className='input-number'
+                            type = "number" 
+                            value = {temp.f} 
+                            onChange = {updateF}>
+                        </input>
+                    </div>
                 </div>
             </div>
         </>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './Hour.css'
 
 const Hour = () => {
     const [time, SetTime]=useState(null)
@@ -24,10 +25,17 @@ const Hour = () => {
       }
 
     return (
-        <div>
-            <input type="text"  onChange={ConvertTime}/>
-            <button onClick={()=>SetPrint(true)}>click</button>
-            {print? <h1>{time}</h1>: null }
+        <div className='hour-container'>
+            <div className='hour-wrapper'>
+                <div className='time-container'>
+                    <label htmlFor="">Enter time:</label>
+                    <input type="number"  onChange={ConvertTime}/>
+                    <button onClick={()=>SetPrint(true)}>Check Time</button>
+                </div>
+                <div className='time-container'>
+                    {print? <p>{time}</p>: 'Output Here' } 
+                </div>
+            </div>
         </div>
     )
 }

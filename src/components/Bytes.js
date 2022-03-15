@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import './Bytes.css'
 
 const Bytes = () => {
     const [bytes, updateBytes] = useState({ b:0,kb: 0, mb: 0,gb:0,tb:0 })
@@ -46,7 +47,8 @@ const Bytes = () => {
         
     })
     return (
-        <div id="container">
+        <div >
+            <div >
                 <div id="box1">
                     <h1>Bytes</h1>
                     <input
@@ -88,6 +90,7 @@ const Bytes = () => {
                     </input>
                 </div>
             </div>
+        </div>
     )
 }
 

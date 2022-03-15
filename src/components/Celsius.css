@@ -1,0 +1,25 @@
+.cel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+}
+.cel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+.card > p {
+  text-align: center;
+}
+.card {
+  margin: 10px;
+}
+.input-number {
+  height: 20px;
+}
