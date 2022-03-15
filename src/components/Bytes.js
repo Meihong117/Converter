@@ -47,47 +47,51 @@ const Bytes = () => {
         
     })
     return (
-        <div >
-            <div >
-                <div id="box1">
-                    <h1>Bytes</h1>
-                    <input
-                        type = "number"
-                        value = {bytes.b}
-                        onChange = {updateB} >
-                    </input>
+        <div className='bytes-container'>
+            <div className='bytes-wrapper'>
+                <div  className='box1'>
+                    <div className='box'>
+                        <h1>Bytes</h1>
+                        <input
+                            type = "number"
+                            value = {bytes.b}
+                            onChange = {updateB} >
+                        </input>
+                    </div>
                 </div>
-                <div id="box2">
-                    <h1>Kilobytes</h1>
-                    <input
-                        type = "number" 
-                        value = {bytes.kb} 
-                        onChange = {updateKB}>
-                    </input>
-                </div>
-                <div id="box3">
-                    <h1>Megabytes</h1>
-                    <input
-                        type = "number" 
-                        value = {bytes.mb} 
-                        onChange = {updateMB}>
-                    </input>
-                </div>
-                <div id="box4">
-                    <h1>Gigabytes</h1>
-                    <input
-                        type = "number" 
-                        value = {bytes.gb} 
-                        onChange = {updateGB}>
-                    </input>
-                </div>
-                <div id="box5">
-                    <h1>terabytes</h1>
-                    <input
-                        type = "number" 
-                        value = {bytes.tb} 
-                        onChange = {updateTB}>
-                    </input>
+                <div className='box2'>
+                    <div className='box'>
+                        <h3>Kilobytes</h3>
+                        <input
+                            type = "number" 
+                            value = {bytes.kb} 
+                            onChange = {updateKB}>
+                        </input>
+                    </div>
+                    <div className='box'>
+                        <h3>Megabytes</h3>
+                        <input
+                            type = "number" 
+                            value = {bytes.mb} 
+                            onChange = {updateMB}>
+                        </input>
+                    </div>
+                    <div className='box'>
+                        <h3>Gigabytes</h3>
+                        <input
+                            type = "number" 
+                            value = {bytes.gb} 
+                            onChange = {updateGB}>
+                        </input>
+                    </div>
+                    <div className='box'>
+                        <h3>terabytes</h3>
+                        <input
+                            type = "number" 
+                            value = {bytes.tb} 
+                            onChange = {updateTB}>
+                        </input>
+                    </div>
                 </div>
             </div>
         </div>
