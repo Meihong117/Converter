@@ -18,7 +18,7 @@ const Hour = () => {
         }else{
             alert('please input valid time')
         }
-        console.log(data)
+        // console.log(data)
    
         SetTime(hours)
         SetPrint(false)
