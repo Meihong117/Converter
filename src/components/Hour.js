@@ -22,7 +22,7 @@ const Hour = () => {
       }
 
     return (
-        <div className='hour-container'>
+        <div className='container'>
             <div className='hour-wrapper'>
                 <div className='time-container'>
                     <label htmlFor="">Convert 24-Time to 12-Time</label>

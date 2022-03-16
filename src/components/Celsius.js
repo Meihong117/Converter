@@ -18,7 +18,7 @@ const Home = () => {
 
     return (
         < >
-            <div className="cel-container">
+            <div className="container">
                 <div className='cel-wrapper'>
                     <div className="card">
                         <p>Celsius</p>

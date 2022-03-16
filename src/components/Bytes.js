@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './Bytes.css'
 import {BiSort} from "react-icons/bi"
-
+import '../App.css'
 
 const Bytes = () => {
     const [bytes, updateBytes] = useState({ b:0,kb: 0, mb: 0,gb:0,tb:0 })
@@ -49,7 +49,7 @@ const Bytes = () => {
         
     })
     return (
-        <div className='bytes-container'>
+        <div className='container'>
             <div className='bytes-wrapper'>
                 <div  className='box1'>
                     <div className='box'>
