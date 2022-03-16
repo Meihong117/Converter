@@ -6,6 +6,7 @@ import Hour from './components/Hour';
 import Length from './components/Length';
 import Bytes from './components/Bytes';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />}/>
         <Route path="/celsius" element={<Celsius />}/>
         <Route path="/hour" element={<Hour />}/>
         <Route path="/length" element={<Length />}/>

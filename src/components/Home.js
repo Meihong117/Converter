@@ -1,8 +1,14 @@
 import React from 'react'
+import './Home.css'
 
 const Home = () => {
     return (
-        <div>
+        <div className='home'>
+            <div className='home-container'>
+                <h1>MAGIQ Software</h1>
+                <h2>Graduate Technical Test</h2> 
+                <h3>- Part 2 -</h3>  
+            </div>
             
         </div>
     )

@@ -1,0 +1,27 @@
+.home {
+  /* background: url("../assets/img-home.jpg") center center/cover no-repeat; */
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); */
+  object-fit: contain;
+}
+.home-container {
+  /* background-color: ivory; */
+  text-align: center;
+  /* border: 1px dotted; */
+  padding: 20px;
+  border-radius: 10px;
+}
+.home-container h1 {
+  font-size: 70px;
+}
+.home-container h2 {
+  font-size: 40px;
+}
+.home-container h3 {
+  font-size: 20px;
+}

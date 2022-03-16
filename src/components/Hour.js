@@ -1,11 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import './Hour.css'
+import {BiSort} from "react-icons/bi"
 
 const Hour = () => {
     const [time, SetTime]=useState(null)
-    const [print, SetPrint]=useState(false)
- 
 
     function ConvertTime (e) {
         let data=e.target.value
@@ -18,22 +17,18 @@ const Hour = () => {
         }else{
             alert('please input valid time')
         }
-        // console.log(data)
    
         SetTime(hours)
-        SetPrint(false)
       }
 
     return (
         <div className='hour-container'>
             <div className='hour-wrapper'>
                 <div className='time-container'>
-                    <label htmlFor="">Enter time:</label>
-                    <input type="number"  onChange={ConvertTime}/>
-                    <button onClick={()=>SetPrint(true)}>Check Time</button>
-                </div>
-                <div className='time-container'>
-                    {print? <p>{time}</p>: 'Output Here' } 
+                    <label htmlFor="">Convert 24-Time to 12-Time</label>
+                    <input type="number"  onChange={ConvertTime} placeholder='Enter time' />
+                    <div style={{textAlign:'center'}}><BiSort /></div>  
+                    <input type="text" placeholder={'Output here'} value={time} />
                 </div>
             </div>
         </div>

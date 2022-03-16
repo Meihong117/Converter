@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import './Bytes.css'
+import {BiSort} from "react-icons/bi"
+
 
 const Bytes = () => {
     const [bytes, updateBytes] = useState({ b:0,kb: 0, mb: 0,gb:0,tb:0 })
@@ -59,6 +61,8 @@ const Bytes = () => {
                         </input>
                     </div>
                 </div>
+                <div style={{textAlign:'center'}}><BiSort /></div>  
+
                 <div className='box2'>
                     <div className='box'>
                         <h3>Kilobytes</h3>
