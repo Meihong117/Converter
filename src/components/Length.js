@@ -100,7 +100,7 @@ const Length = () => {
                             <option value={option}>{option}</option>
                             ))}
                         </select>
-                        <input type="number" onChange={convertLength} placeholder='input'/>
+                        <input type="number" onChange={convertLength} placeholder='Input'/>
                     </div>
 
                     <div><FaExchangeAlt /></div>
@@ -111,7 +111,7 @@ const Length = () => {
                             <option value={option} >{option}</option>
                             ))}
                         </select>
-                        <input type="number" value={output}  placeholder='output' />
+                        <input type="text" value={output}  placeholder='Output' />
                     </div>
                     {/* <button onClick={reset} type="submit">Reset</button> */}
                 </div>

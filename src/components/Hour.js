@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './Hour.css'
-import {BiSort} from "react-icons/bi"
+import {BiDownvote} from "react-icons/bi"
 
 const Hour = () => {
     const [time, SetTime]=useState(null)
@@ -23,11 +23,9 @@ const Hour = () => {
         <div className='container'>
             <div className='hour-wrapper'>
                 <div className='time-container'>
-                    <label htmlFor="">24-Hour</label>
-                    <input type="number"  onChange={ConvertTime} placeholder='Enter 24-hour' />
-                    <div style={{textAlign:'center'}}><BiSort /></div>  
-                    <label htmlFor="">12-Hour</label>
-                    <input type="text" placeholder={'12-Hour'} value={time} />
+                    <input type="number"  onChange={ConvertTime} placeholder='eg: 13' />
+                    <div style={{textAlign:'center'}}><BiDownvote /></div>  
+                    <input type="text" placeholder='eg: 1PM' value={time} />
                 </div>
             </div>
         </div>

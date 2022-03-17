@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './Bytes.css'
-import {BiSort} from "react-icons/bi"
+import {BiSort, BiDownvote} from "react-icons/bi"
 import '../App.css'
 
 const Bytes = () => {
@@ -48,27 +48,39 @@ const Bytes = () => {
     })
 
     const [terabyte,setTerabyte]=useState()
+
     function convert(e){
        let output= e.target.value
         let result
 
-        if(0<=output<1000) result=output+"terabyte";
-        if(1000<=output<=1000000) result=(output/1000)+"gigabyte";
-        if(1000000<output<=1000000000) result=(output/1000000)+"megabyte";
-        if(1000000000<output<=1000000000000) result=(output/1000000000)+"kilobyte";
-        if(1000000000000<output<=1000000000000000) result=(output/1000000000000)+"byte";
+        if(0<=output && output<1000) result=output+"byte";
+        if(1000<=output && output<1000000) result=(output/1000)+"kilobyte";
+        if(1000000<=output && output<1000000000) result=(output/1000000)+"megabyte";
+        if(1000000000<=output && output<1000000000000) result=(output/1000000000)+"gigabyte";
+        if(1000000000000<=output && output<1000000000000000) result=(output/1000000000000)+"terabyte";
 
         setTerabyte(result)
     }
    console.log(terabyte)
     return (
         <>
+            {/*  */}
+            <div className='byte-container'>
+                <div className='bytes-wrapper'>
+                    <div className='box'>
+                        <input type="number" onChange={convert} placeholder='eg: 1000 bye'/>
+                        <div style={{textAlign:'center'}}><BiDownvote /></div>  
+                        <input type="text" value={terabyte} placeholder='eg: 1 kilobyte'/>
+                    </div>
+                </div>
+            </div>
+
             {/* converter */}
-            <div className='container'>
+            <div className='bytes-container'>
                 <div className='bytes-wrapper'>
                     <div  className='box1'>
                         <div className='box'>
-                            <h1>Bytes</h1>
+                            <h1>Byte</h1>
                             <input
                                 type = "number"
                                 value = {bytes.b}
@@ -80,7 +92,7 @@ const Bytes = () => {
 
                     <div className='box2'>
                         <div className='box'>
-                            <h3>Kilobytes</h3>
+                            <h3>Kilobyte</h3>
                             <input
                                 type = "number" 
                                 value = {bytes.kb} 
@@ -88,7 +100,7 @@ const Bytes = () => {
                             </input>
                         </div>
                         <div className='box'>
-                            <h3>Megabytes</h3>
+                            <h3>Megabyte</h3>
                             <input
                                 type = "number" 
                                 value = {bytes.mb} 
@@ -96,7 +108,7 @@ const Bytes = () => {
                             </input>
                         </div>
                         <div className='box'>
-                            <h3>Gigabytes</h3>
+                            <h3>Gigabyte</h3>
                             <input
                                 type = "number" 
                                 value = {bytes.gb} 
@@ -104,7 +116,7 @@ const Bytes = () => {
                             </input>
                         </div>
                         <div className='box'>
-                            <h3>terabytes</h3>
+                            <h3>Terabyte</h3>
                             <input
                                 type = "number" 
                                 value = {bytes.tb} 
@@ -114,17 +126,6 @@ const Bytes = () => {
                     </div>
                 </div>
             </div>
-            {/*  */}
-            <div>
-                <div>
-                    <label htmlFor="">Terabyte</label>
-                    <input type="number" onChange={convert} placeholder='Input'/>
-                    <label htmlFor="">Convert to:</label>
-                    <input type="text" value={terabyte} placeholder='output'/>
-                    
-                </div>
-            </div>
-
         </>
     )
 }
