@@ -1,5 +1,3 @@
-#1 install node_modules
-<npm install>
+#1 npm install
 
-#2 run reactjs
-<npm start>
+#2 npm start
