@@ -23,6 +23,7 @@ const Hour = () => {
         <div className='container'>
             <div className='hour-wrapper'>
                 <div className='time-container'>
+                    <h3 htmlFor="">Hour Converter</h3>
                     <input type="number"  onChange={ConvertTime} placeholder='eg: 13' />
                     <div style={{textAlign:'center'}}><BiDownvote /></div>  
                     <input type="text" placeholder='eg: 1PM' value={time} />
