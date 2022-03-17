@@ -8,7 +8,7 @@ const Hour = () => {
 
     function ConvertTime (e) {
         let data=e.target.value
-        let suffix = data >= 12 ? "PM":"AM";
+        let suffix = data >= 12 ? " PM":" AM";
         let hours
        
         if(1<=data<=24){

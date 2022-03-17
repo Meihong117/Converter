@@ -16,6 +16,7 @@ function Navbar() {
                         <li className='nav-item' ><Link to='/hour' className='nav-links'>Hour </Link></li>
                         <li className='nav-item'><Link to='/length' className='nav-links'>Length</Link></li>
                         <li className='nav-item'><Link to='/bytes' className='nav-links'>Bytes</Link></li>
+                        <li className='nav-item'><a href='https://github.com/Meihong117/MAGIQ-test' target="_blank" className='nav-links'>See the code</a></li>
                     </ul>
                 </div>
             </nav>
