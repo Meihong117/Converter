@@ -14,8 +14,6 @@ const Hour = () => {
         if(1<=data<=24){
             if(1<=data && data<=12) hours=data + suffix;
             else if(12<data && data<=24) hours=(data-12) + suffix
-        }else{
-            alert('please input valid time')
         }
    
         SetTime(hours)
@@ -25,10 +23,11 @@ const Hour = () => {
         <div className='container'>
             <div className='hour-wrapper'>
                 <div className='time-container'>
-                    <label htmlFor="">Convert 24-Time to 12-Time</label>
-                    <input type="number"  onChange={ConvertTime} placeholder='Enter time' />
+                    <label htmlFor="">24-Hour</label>
+                    <input type="number"  onChange={ConvertTime} placeholder='Enter 24-hour' />
                     <div style={{textAlign:'center'}}><BiSort /></div>  
-                    <input type="text" placeholder={'Output here'} value={time} />
+                    <label htmlFor="">12-Hour</label>
+                    <input type="text" placeholder={'12-Hour'} value={time} />
                 </div>
             </div>
         </div>
