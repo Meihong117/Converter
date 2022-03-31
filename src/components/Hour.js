@@ -4,19 +4,21 @@ import './Hour.css'
 import {BiDownvote} from "react-icons/bi"
 
 const Hour = () => {
-    const [time, SetTime]=useState(null)
+    const [time, setTime]=useState(null)
 
     function ConvertTime (e) {
         let data=e.target.value
         let suffix = data >= 12 ? " PM":" AM";
         let hours
        
-        if(1<=data<=24){
+        if(1<=data && data<=24){
             if(1<=data && data<=12) hours=data + suffix;
             else if(12<data && data<=24) hours=(data-12) + suffix
         }
-   
-        SetTime(hours)
+        else {
+            hours="Please enter right hour"
+        }
+        setTime(hours)
       }
 
     return (

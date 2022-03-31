@@ -10,7 +10,6 @@ const Home = () => {
                 <h3>- Part 2 -</h3>  
                 <h3>- Framework: Reactjs -</h3>  
             </div>
-            
         </div>
     )
 }

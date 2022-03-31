@@ -47,10 +47,11 @@ const Bytes = () => {
         tb: ev.target.value
     })
 
+    // convert to right byte-type
     const [terabyte,setTerabyte]=useState()
 
     function convert(e){
-       let output= e.target.value
+        let output= e.target.value
         let result
 
         if(0<=output && output<1000) result=output+" Byte";
@@ -62,12 +63,11 @@ const Bytes = () => {
 
         setTerabyte(result)
     }
-   console.log(terabyte)
+    
     return (
         <>
-            {/*  */}
             <div style={{textAlign:'center'}}><h2>Bytes Converter</h2></div>
-
+            {/* convert to right byte-type */}
             <div className='byte-container'>
                 <div className='bytes-wrapper'>
                     <div className='box'>
@@ -78,7 +78,7 @@ const Bytes = () => {
                 </div>
             </div>
 
-            {/* converter */}
+            {/* convert to all type of bytes */}
             <div className='bytes-container'>
                 <div className='bytes-wrapper'>
                     <div  className='box1'>

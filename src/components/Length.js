@@ -1,6 +1,6 @@
 import React from 'react'
 import {Data} from './LengthData'
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
 import './Length.css'
 import { BiRightArrowAlt } from "react-icons/bi";
 
@@ -8,7 +8,6 @@ import { BiRightArrowAlt } from "react-icons/bi";
 const Length = () => {
     const [isFromLength, setIsFromLength]=useState()  // every select value
     const [isToLength, setIsToLength]=useState() //
-    // const [input, setInput]=useState() 
     const [output, setOutput]=useState() 
 
     let name= Object.keys(Data[0]) 
@@ -50,7 +49,6 @@ const Length = () => {
         if(isFromLength==="Kilometre" && isToLength==="Feet") setOutput(input*3280.84)
         if(isFromLength==="Kilometre" && isToLength==="Yards") setOutput(input*1093.61)
         if(isFromLength==="Kilometre" && isToLength==="Miles") setOutput(input*0.621371)
-
 
         if(isFromLength==="Inche" && isToLength==="Kilometre") setOutput(input*2.54e-5)
         if(isFromLength==="Inche" && isToLength==="Meter") setOutput(input*0.0254)
@@ -114,7 +112,6 @@ const Length = () => {
                         </select>
                         <input type="text" value={output}  placeholder='Output' />
                     </div>
-                    {/* <button onClick={reset} type="submit">Reset</button> */}
                 </div>
             </div>
       </div>
