@@ -71,14 +71,14 @@ const Bytes = () => {
             <div className='byte-container'>
                 <div className='bytes-wrapper'>
                     <div className='box'>
-                        <input type="number" onChange={convert} placeholder='eg: 1000 bye'/>
+                        <input type="number" onChange={convert} placeholder='Byte'/>
                         <div style={{textAlign:'center'}}><BiDownvote /></div>  
-                        <input type="text" value={terabyte} placeholder='eg: 1 kilobyte'/>
+                        <input type="text" value={terabyte} placeholder='KB/MB/GB/TB'/>
                     </div>
                 </div>
             </div>
 
-            {/* convert to all type of bytes */}
+            {/* convert to all types of byte */}
             <div className='bytes-container'>
                 <div className='bytes-wrapper'>
                     <div  className='box1'>
