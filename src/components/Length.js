@@ -14,6 +14,7 @@ const Length = () => {
 
     function convertLength(e){
         let input=Number(e.target.value)
+        
         if(isFromLength==="Meter" && isToLength==="Meter") setOutput(input)
         if(isFromLength==="Meter" && isToLength==="Milimitre") setOutput(input*1000)
         if(isFromLength==="Meter" && isToLength==="Centimetre") setOutput(input*100)
@@ -92,7 +93,7 @@ const Length = () => {
             <div className='length'>
                <div style={{textAlign:'center'}}><h3>Length Converter</h3></div> 
                 <div className='length-wrapper'>
-                    {/* #1 */}
+                    {/* #1 input option */}
                     <div className="select-container">
                         <select className='selection'  onChange={e=>setIsFromLength(e.target.value)} >
                             {name.map((option) => (
@@ -103,7 +104,7 @@ const Length = () => {
                     </div>
 
                     <div><BiRightArrowAlt /></div>
-                    {/* #2 */}
+                    {/* #2 output option */}
                     <div className="select-container">
                         <select className='selection'  onChange={e=>setIsToLength(e.target.value)} >
                             {name.map((option) => (
