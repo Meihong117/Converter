@@ -8,11 +8,11 @@ const Home = () => {
 
     const updateC = ev => updateTemp({
         c: ev.target.value,
-        f: (+ev.target.value * 9 / 5 + 32).toFixed(2)
+        f: (ev.target.value * 9 / 5 + 32).toFixed(2)
     })
     
     const updateF = ev => updateTemp({
-        c: ((+ev.target.value - 32) * 5 / 9).toFixed(2),
+        c: ((ev.target.value - 32) * 5 / 9).toFixed(2),
         f: ev.target.value
     })
 
@@ -22,22 +22,12 @@ const Home = () => {
                 <div className='cel-wrapper'>
                     <div className="card">
                         <p>Celsius</p>
-                        <input
-                            className='input-number'
-                            type = "number"
-                            value = {temp.c}
-                            onChange = {updateC} >
-                        </input>
+                        <input className='input-number' type = "number" value = {temp.c} onChange = {updateC} />
                     </div>
                     <FaExchangeAlt />
                     <div className="card">
                         <p>Fahrenheit</p>
-                        <input
-                            className='input-number'
-                            type = "number" 
-                            value = {temp.f} 
-                            onChange = {updateF}>
-                        </input>
+                        <input className='input-number' type = "number"  value = {temp.f} onChange = {updateF} />
                     </div>
                 </div>
             </div>

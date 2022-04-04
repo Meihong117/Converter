@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router, Route, Routes,Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, {useState} from 'react'
 import Celsius from './components/Celsius';
 import Hour from './components/Hour';

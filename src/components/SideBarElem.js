@@ -73,7 +73,6 @@ margin: 20px;
 }
 `
 
-
 export const SideBtnWrap=styled.div`
 display: flex;
 justify-content: center;
