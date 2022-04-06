@@ -16,6 +16,7 @@ const Length = () => {
     let obj_keys=[] // ['Meter', 'Centimetre',...]
     let obj_keys_keys=[] // ['Meter', 'Centimetre', 'Milimitre', 'Kilometre', 'Inche', 'Feet', 'Yards', 'Miles']
     let values=[]
+
     for(let i=0; i<Lengths.length;i++){
         obj_keys.push(Object.keys(Lengths[i]).join())
         obj_keys_keys.push(Object.keys(Lengths[i])[0])
@@ -37,37 +38,6 @@ const Length = () => {
         if(isFromLength==obj_keys[a]){ 
             if(isToLength==obj_keys_keys[b]) setOutput(input*values[a][b])
         }
-    
-        // original
-        
-        // if(isFromLength==="Feet" && isToLength==="Kilometre") setOutput(input*0.0003048)
-        // if(isFromLength==="Feet" && isToLength==="Meter") setOutput(input*0.3048)
-        // if(isFromLength==="Feet" && isToLength==="Centimetre") setOutput(input*30.48)
-        // if(isFromLength==="Feet" && isToLength==="Milimitre") setOutput(input*304.8)
-        // if(isFromLength==="Feet" && isToLength==="Inche") setOutput(input*12)
-        // if(isFromLength==="Feet" && isToLength==="Feet") setOutput(input)
-        // if(isFromLength==="Feet" && isToLength==="Yards") setOutput(input*0.333)
-        // if(isFromLength==="Feet" && isToLength==="Miles") setOutput(input*0.000189394)
-        
-        // if(isFromLength==="Yards" && isToLength==="Kilometre") setOutput(input*0.0009144)
-        // if(isFromLength==="Yards" && isToLength==="Meter") setOutput(input*0.9144)
-        // if(isFromLength==="Yards" && isToLength==="Centimetre") setOutput(input*91.44)
-        // if(isFromLength==="Yards" && isToLength==="Milimitre") setOutput(input*914.4)
-        // if(isFromLength==="Yards" && isToLength==="Inche") setOutput(input*36)
-        // if(isFromLength==="Yards" && isToLength==="Feet") setOutput(input*3)
-        // if(isFromLength==="Yards" && isToLength==="Yards") setOutput(input)
-        // if(isFromLength==="Yards" && isToLength==="Miles") setOutput(input*0.000568182)
-        
-        // if(isFromLength==="Miles" && isToLength==="Kilometre") setOutput(input*1.60934)
-        // if(isFromLength==="Miles" && isToLength==="Meter") setOutput(input*1609.34)
-        // if(isFromLength==="Miles" && isToLength==="Centimetre") setOutput(input*160934)
-        // if(isFromLength==="Miles" && isToLength==="Milimitre") setOutput(input*1609340)
-        // if(isFromLength==="Miles" && isToLength==="Inche") setOutput(input*63360)
-        // if(isFromLength==="Miles" && isToLength==="Feet") setOutput(input*5280)
-        // if(isFromLength==="Miles" && isToLength==="Yards") setOutput(input*1760)
-        // if(isFromLength==="Miles" && isToLength==="Miles") setOutput(input)
-
-        // ....
     }
 
     return (

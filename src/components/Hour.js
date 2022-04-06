@@ -8,7 +8,6 @@ const Hour = () => {
 
     function ConvertTime (e) {
         let data=e.target.value
-        // let suffix = data >= 12 ? " PM":" AM";
        
         let input_length=data.length
         let last_two_elem_3=data.slice(1,3) // input length=3
@@ -23,6 +22,7 @@ const Hour = () => {
             else hours="Please enter right hour"
 
         }
+
         // Enter time type: 100-2400 
         else if(input_length===3 && last_two_elem_3==='00' && data[0]>=1 && data[0]<=9) hours=data[0]+"AM"
 
@@ -35,12 +35,8 @@ const Hour = () => {
         else hours="Please enter right hour"
 
         setTime(hours)
-        // make string hour
-        // if(1<=data && data<=24){
-        //     if(1<=data && data<=12) hours=data + suffix;
-        //     else if(12<data && data<=24) hours=(data-12) + suffix
-        // }
       }
+
 
     return (
         <div className='container'>
@@ -50,6 +46,7 @@ const Hour = () => {
                     <input type="text"  onChange={ConvertTime} placeholder='eg: 13/1300' />
                     <div style={{textAlign:'center'}}><BiDownvote /></div>  
                     <input type="text" placeholder='eg: 1PM' value={time} readOnly/>
+                    
                 </div>
             </div>
         </div>
