@@ -31,7 +31,7 @@ const Hour = () => {
         //Time: 1000-2400
         else if(input_length===4 && last_two_elem_4>=0 && last_two_elem_4<=59){
             if(first_two_elem==='10' || first_two_elem==='11') hours=first_two_elem+':'+last_two_elem_4+ "AM"
-            else if(first_two_elem==='12') hours= "12PM"
+            else if(first_two_elem==='12') hours='12:'+last_two_elem_4+ "pm"
             else if(first_two_elem>=13 && first_two_elem<=24) hours=(first_two_elem-12) + ':'+last_two_elem_4+"PM" 
             else hours="Please enter right hour"
         }
