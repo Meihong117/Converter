@@ -20,13 +20,6 @@ const Bytes = () => {
          if(byte_value[2]<=output && output<byte_value[3]) result=(output/byte_value[2])+" Gigabytes";
          if(byte_value[3]<=output) result=(output/byte_value[3])+" Terabytes";
  
-         // if(0<=output && output<1000) result=output+" Byte";
-         // if(1000<=output && output<1000000) result=(output/1000)+" Kilobyte";
-         // if(1000000<=output && output<1000000000) result=(output/1000000)+" Megabyte";
-         // if(1000000000<=output && output<1000000000000) result=(output/1000000000)+" Gigabyte";
-         // if(1000000000000<=output && output<1000000000000000) result=(output/1000000000000)+" Terabyte";
-         // if( output>=1000000000000000) result=(output/1000000000000)+" Terabyte";
- 
          setTerabyte(result)
      }
 
