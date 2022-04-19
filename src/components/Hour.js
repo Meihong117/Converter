@@ -23,13 +23,16 @@ const Hour = () => {
 
         }
 
-        // Enter time type: 100-2400 
-        else if(input_length===3 && last_two_elem_3==='00' && data[0]>=1 && data[0]<=9) hours=data[0]+"AM"
-
-        else if(input_length===4 && last_two_elem_4==='00'){
-            if(first_two_elem==='10' || first_two_elem==='11') hours=first_two_elem+ "AM"
+        // Enter time type: 100-900 
+        else if(input_length===3 && last_two_elem_3>=0 && last_two_elem_3<=59 && data[0]>=1 && data[0]<=9)
+           hours=data[0]+':'+last_two_elem_3+"AM" 
+        
+        
+        //Time: 1000-2400
+        else if(input_length===4 && last_two_elem_4>=0 && last_two_elem_4<=59){
+            if(first_two_elem==='10' || first_two_elem==='11') hours=first_two_elem+':'+last_two_elem_4+ "AM"
             else if(first_two_elem==='12') hours= "12PM"
-            else if(first_two_elem>=13 && first_two_elem<=24) hours=(first_two_elem-12) + "PM" 
+            else if(first_two_elem>=13 && first_two_elem<=24) hours=(first_two_elem-12) + ':'+last_two_elem_4+"PM" 
             else hours="Please enter right hour"
         }
         else hours="Please enter right hour"
